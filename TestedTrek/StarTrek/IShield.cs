@@ -7,14 +7,21 @@ namespace StarTrek
 {
     public class Shield
     {
-        public bool IsUp()
+        private bool raised = false;
+
+        public bool IsUp
         {
-            return false;
+            get { return raised; }
         }
 
         public bool IsBuckled()
         {
             return true;
+        }
+
+        public void RaiseShield(bool v)
+        {
+            raised = v;
         }
     }
 }
