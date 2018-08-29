@@ -7,11 +7,23 @@ namespace MSTests
     [TestClass]
     public class ShieldTests
     {
+        Shield shield;
+        [TestInitialize]
+        public void Init()
+        {
+            shield = new Shield();
+        }
+
         [TestMethod]
         public void ShieldIsDown()
         {
-            Shield shield = new Shield();
             Assert.IsFalse(shield.IsUp());
+        }
+
+        [TestMethod]
+        public void ShieldBuckles()
+        {
+            Assert.IsTrue(shield.IsBuckled());
         }
     }
 }

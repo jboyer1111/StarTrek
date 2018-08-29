@@ -11,5 +11,10 @@ namespace StarTrek
         {
             return false;
         }
+
+        public bool IsBuckled()
+        {
+            return true;
+        }
     }
 }
